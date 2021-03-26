@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  if(req.query.nombre != ''){
+  if(req.query.nombre != undefined){
     res.send(`<h1>Hola ${req.query.nombre}!</h1>`);
   }else{
     res.send(`<h1>Hola desconocido!</h1>`);
